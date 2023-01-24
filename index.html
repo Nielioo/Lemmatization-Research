@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lemmatization</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section class="py-4 py-xl-5">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <h2 class="display-6 fw-bold">Lemmatization Dictionary</h2>
+                    <div class="mx-auto d-block" id="anim-search" style="max-width: 400px;">
+                    </div>
+                </div>
+            </div>
+            <form class="d-flex justify-content-center" method="post">
+                <div class="mb-3"><input class="form-control" type="text" name="word" placeholder="Your Word"></div>
+                <div class="mb-3"><button class="btn btn-primary ms-2" type="submit">Translate</button></div>
+            </form>
+        </div>
+        <p class="text-muted" style="text-align: center;">"Lemmatization Word Result Here"</p>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'></script>
+
+    <script>
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('anim-search'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'assets/lottie/search.json' // lottie file path
+          })
+    </script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script> -->
+</body>
+
+</html>
