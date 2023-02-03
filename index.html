@@ -3588,7 +3588,6 @@
         function showText() {
             showText = "";
             abrevDictionary.forEach(function(object, index) {
-                console.log(object);
                 if (inputText.value == object['abbrev']) {
                     showText = object['complete'];
                     outputText.innerHTML = object['complete'];
