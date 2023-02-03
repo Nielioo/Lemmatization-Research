@@ -18,17 +18,17 @@
                     </div>
                 </div>
             </div>
-            <form class="d-flex justify-content-center" method="post">
-                <div class="mb-3"><input class="form-control" type="text" name="word" placeholder="Your Word"></div>
-                <div class="mb-3"><button class="btn btn-primary ms-2" type="submit">Translate</button></div>
+            <form action="/" class="d-flex justify-content-center" method="post">
+                <div class="mb-3"><input class="form-control" id="form-input" type="text" name="word" placeholder="Your Word"></div>
+                <div class="mb-3"><button class="btn btn-primary ms-2" id="form-button" type="submit">Translate</button></div>
             </form>
         </div>
-        <p class="text-muted" style="text-align: center;">"Lemmatization Word Result Here"</p>
+        <p class="text-muted" id="text-output" style="text-align: center;">"Lemmatization Word Result Here"</p>
     </section>
 
-<div class="text-center p-2 mx-auto fixed-bottom">
-    <a href="https://github.com/Nielioo/Lemmatization-Research" class="text-decoration-none">Github Project</a>
-</div>
+    <div class="text-center p-2 mx-auto fixed-bottom">
+        <a href="https://github.com/Nielioo/Lemmatization-Research" class="text-decoration-none">Github Project</a>
+    </div>
 
     <!-- Scripts -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -41,7 +41,24 @@
             loop: true,
             autoplay: true,
             path: 'assets/lottie/search.json' // lottie file path
-          })
+        })
+
+        //Store text value in HTMl tag with 'form-input'
+        var inputText = document.getElementById('form-input');
+
+        //Instantiate button variable from the id 'form-button'
+        var inputButton = document.getElementById('form-button');
+
+        //Store text value in HTML tag with 'text-output'
+        var outputText = document.getElementById('text-output');
+
+        //Show text in HTML tag with ID 'text-output'
+        function showText() {
+            outputText.innerHTML = inputText.value;
+        }
+
+        //Add click event to call function
+        inputButton.addEventListener('click', showText);
     </script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.2/lottie.min.js"></script> -->
 </body>
